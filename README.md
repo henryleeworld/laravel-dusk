@@ -28,5 +28,5 @@ $ php artisan dusk
 ```
 ----
 ## 畫面截圖
-![](https://i.imgur.com/udxFx9O.png)
+![](https://i.imgur.com/mHAkVlj.png)
 > 使用 Google Chrome 和獨立安裝的 ChromeDriver 來執行你的瀏覽器測試
