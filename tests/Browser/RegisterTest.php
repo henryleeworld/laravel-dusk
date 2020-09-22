@@ -25,7 +25,7 @@ class RegisterTest extends DuskTestCase
                     ->type('password', '+%4Gf:dnZ>Z23]Cb')
                     ->type('password_confirmation', '+%4Gf:dnZ>Z23]Cb')
                     ->press('註冊')
-                    ->assertPathIs('/home');
+                    ->assertPathIs('/dashboard');
         });
     }
 }

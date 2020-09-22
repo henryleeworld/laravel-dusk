@@ -5,7 +5,7 @@ namespace Tests\Browser;
 use Illuminate\Foundation\Testing\DatabaseMigrations;
 use Laravel\Dusk\Browser;
 use Tests\DuskTestCase;
-use App\User;
+use App\Models\User;
 
 class LoginTest extends DuskTestCase
 {
@@ -18,10 +18,10 @@ class LoginTest extends DuskTestCase
      */
     public function testLogin()
     {
-        factory(User::class)->create();
+        User::factory()->times(1)->create();
         $this->browse(function (Browser $browser) {
             $browser->loginAs(User::find(1))
-                    ->visit('/home')
+                    ->visit('/dashboard')
                     ->waitForText('儀表板')
                     ->assertSee('儀表板');
         });
