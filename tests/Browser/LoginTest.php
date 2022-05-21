@@ -22,8 +22,8 @@ class LoginTest extends DuskTestCase
         $this->browse(function (Browser $browser) {
             $browser->loginAs(User::find(1))
                     ->visit('/dashboard')
-                    ->waitForText('儀表板')
-                    ->assertSee('儀表板');
+                    ->waitForText('控制面板')
+                    ->assertSee('控制面板');
         });
     }
 }
