@@ -1,4 +1,4 @@
-# Laravel 9 瀏覽器測試
+# Laravel 10 瀏覽器測試
 
 引入 laravel 的 dusk 套件來擴增提供了一個可讀性高且易於瀏覽器自動化測試 API。預設不需要在你的機器上安裝 JDK 或 Selenium。而是使用獨立安裝的 ChromeDriver。然而，你可以自由的運用任何與 Selenium 相容的驅動。
 
@@ -32,5 +32,5 @@ $ php artisan dusk
 ```
 ----
 ## 畫面截圖
-![](https://i.imgur.com/yzQJGfz.png)
+![](https://i.imgur.com/UEiWQwA.png)
 > 使用 Google Chrome 和獨立安裝的 ChromeDriver 來執行你的瀏覽器測試
