@@ -2,21 +2,19 @@
 
 namespace Tests;
 
-use Illuminate\Support\Collection;
 use Facebook\WebDriver\Chrome\ChromeOptions;
 use Facebook\WebDriver\Remote\DesiredCapabilities;
 use Facebook\WebDriver\Remote\RemoteWebDriver;
+use Illuminate\Support\Collection;
 use Laravel\Dusk\TestCase as BaseTestCase;
+use PHPUnit\Framework\Attributes\BeforeClass;
 
 abstract class DuskTestCase extends BaseTestCase
 {
-    use CreatesApplication;
-
     /**
      * Prepare for Dusk test execution.
-     *
-     * @beforeClass
      */
+    #[BeforeClass]
     public static function prepare(): void
     {
         if (! static::runningInSail()) {
@@ -34,7 +32,7 @@ abstract class DuskTestCase extends BaseTestCase
         ])->unless($this->hasHeadlessDisabled(), function (Collection $items) {
             return $items->merge([
                 '--disable-gpu',
-                '--headless',
+                '--headless=new',
             ]);
         })->all());
 
