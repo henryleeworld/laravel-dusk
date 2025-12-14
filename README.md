@@ -1,4 +1,4 @@
-# Laravel 11 瀏覽器測試
+# Laravel 12 瀏覽器測試
 
 引入 laravel 的 dusk 套件來擴增提供了一個可讀性高且易於瀏覽器自動化測試 API。預設不需要在你的機器上安裝 JDK 或 Selenium。而是使用獨立安裝的 ChromeDriver。然而，你可以自由的運用任何與 Selenium 相容的驅動。
 
@@ -21,17 +21,11 @@ $ php artisan key:generate
 ```sh
 $ php artisan migrate
 ```
-- 在瀏覽器中輸入已定義的路由 URL 來訪問，例如：http://127.0.0.1:8000。
-- 在你的 .env 檔案中設定 APP_URL 環境變數。這個值應該會你在瀏覽器中存取你的應用程式的 URL 匹配。
-- 使用 __Artisan__ 指令的 __dusk:install__ 來在 Browser 目錄裡面建立 tests 目錄。
-```sh
-$ php artisan dusk:install
-```
 - 使用 __Artisan__ 指令的 __dusk__ 來執行你的測試。
 ```sh
 $ php artisan dusk
 ```
 ----
 ## 畫面截圖
-![](https://i.imgur.com/FPt79LX.png)
+![](https://i.imgur.com/6Awr7qd.png)
 > 使用 Google Chrome 和獨立安裝的 ChromeDriver 來執行你的瀏覽器測試
